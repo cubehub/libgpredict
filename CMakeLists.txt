@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 
+option(BUILD_SHARED_LIBS "Build shared libraries" ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 project (gpredict)
 set(CMAKE_BUILD_TYPE Release)
 
@@ -16,7 +19,7 @@ include_directories(${GLIB_INCLUDE_DIR})
 include_directories(${GLIBCONFIG_INCLUDE_DIR})
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-add_library(gpredict SHARED
+add_library(gpredict
     sgpsdp/solar.c
     sgpsdp/sgp_obs.c
     sgpsdp/sgp_in.c
