@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
-option(BUILD_SHARED_LIBS "Build shared libraries" ON)
+# set to ON, to build libgpredict as .so
+option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 project (gpredict)
